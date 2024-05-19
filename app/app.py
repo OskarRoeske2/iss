@@ -49,22 +49,21 @@ st.image("https://i.pinimg.com/originals/9a/7c/12/9a7c12b1e9488b9122883a5a504df8
 # Get names of all astronauts & totalNumber
 names_of_astronauts,total_astronauts = get_astronauts()
 st.header("Astronauts currently in space:")
-names_of_astronauts
 st.write(f"Total number of astronauts in space: {total_astronauts}")
+names_of_astronauts
 
-
+# Get the current location of the ISS
 longitude,latitude = get_current_iss_location()
 
 # Display longitude and latitude
 st.header(f"The following map shows the current location of the ISS") 
-st.caption(f"long:{longitude}    |    lat: {latitude})")
+st.caption(f"long:{longitude}    |    lat: {latitude}")
 
 # Create a DataFrame
 data = pd.DataFrame({
     'lat': [latitude],
     'lon': [longitude]
 })
-
 
 # Define the layer for the map
 layer = pdk.Layer(
@@ -88,7 +87,11 @@ import time
 import streamlit as st
 
 with st.spinner('Wait for it...'):
-    time.sleep(5)
-    st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
-st.success('Done!')
+    time.sleep(2)
+    with st.spinner('Still waiting...'):
+        time.sleep(2)
+        with st.spinner('Almost there'):
+            time.sleep(1)
+        st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
+st.success('et voila')
 

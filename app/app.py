@@ -42,13 +42,13 @@ def get_current_iss_location():
 
 # Set title and description for page
 st.title('Astronaut information')
-st.caption("Below you can see all the astronauts who are currently in space and also the amount of astronauts in total, so you don't need to count them")
+st.caption("Below you can see all the astronauts who are currently in space and also the total amount.")
 
 st.image("https://i.pinimg.com/originals/9a/7c/12/9a7c12b1e9488b9122883a5a504df8bc.gif")
 
 # Get names of all astronauts & totalNumber
 names_of_astronauts,total_astronauts = get_astronauts()
-st.header("Astronauts currently in space:")
+st.header("List of astronauts:")
 st.write(f"Total number of astronauts in space: {total_astronauts}")
 names_of_astronauts
 

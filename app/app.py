@@ -87,11 +87,11 @@ import time
 import streamlit as st
 
 with st.spinner('Wait for it...'):
-    time.sleep(2)
+    time.sleep(3)
     with st.spinner('Still waiting...'):
-        time.sleep(2)
+        time.sleep(3)
         with st.spinner('Almost there'):
-            time.sleep(1)
+            time.sleep(2)
             st.success('et voila')
             st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
 

@@ -92,6 +92,6 @@ with st.spinner('Wait for it...'):
         time.sleep(2)
         with st.spinner('Almost there'):
             time.sleep(1)
-        st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
-st.success('et voila')
+            st.success('et voila')
+            st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
 
